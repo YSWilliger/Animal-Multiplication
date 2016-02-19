@@ -273,7 +273,7 @@ public class GameActivity extends AppCompatActivity implements TextView.OnEditor
 
         helpText.setText("Get 10 correct answers and earn an animal.\n Every 50 points," +
                 " you get to keep that animal and start the mext level.\n" +
-                "Each successive level ismore difficult, so be careful!\n" +
+                "Each new level is more difficult than the last, so be careful!\n" +
                 "Win the game with all four creatures at 200 points."
         );
 

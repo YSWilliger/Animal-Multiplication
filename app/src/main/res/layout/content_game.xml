@@ -13,7 +13,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.maza.animalmultiplication.GameActivity"
     tools:showIn="@layout/activity_game"
-    android:background="#4a9a36">
+    android:background="@drawable/leaves1">
 
     <LinearLayout
         android:orientation="vertical"
@@ -28,19 +28,19 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
 
         <ImageView
-            android:layout_width="64dp"
-            android:layout_height="50dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/qImageView"
-            android:src="@drawable/redquestion"
+            android:src="@drawable/redquestion1"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_weight="1.19"
             android:onClick="displayHelp"
             android:clickable="true"
-            android:padding="3dp"
             android:textAlignment="center"/>
 
         <ImageView
@@ -76,8 +76,8 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="75dp"
+            android:layout_height="55dp"
             android:id="@+id/pointsCounter"
             android:textSize="40sp"
             android:background="#e5f320"
@@ -90,21 +90,22 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/correctView"
-        android:textSize="40sp"
-        android:background="#61f6e2"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="0dp"
-        android:textIsSelectable="false"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/correctView"
+            android:textSize="40sp"
+            android:background="#fcf58a"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/playButton"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"/>
 
-    <LinearLayout
+        <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -170,7 +171,7 @@
             android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@android:color/black"
-            android:background="#43f057"
+            android:background="#fcf58a"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
@@ -194,7 +195,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/mathText2"
-            android:background="#34e048"
+            android:background="#fcf58a"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textSize="40sp"
@@ -212,15 +213,16 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="50dp"
         android:imeOptions="actionDone"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/enterAnsText"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:layout_marginLeft="10dp"
-        android:background="#e5f320"/>
+        android:background="#fcf58a"
+        android:layout_marginBottom="5dp"
+        android:autoText="true"/>
 
         <com.google.android.gms.ads.AdView
             android:layout_width="wrap_content"
@@ -236,29 +238,28 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/helpScreen"
-        android:background="#79fdf7f7"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:nestedScrollingEnabled="false">
+        android:nestedScrollingEnabled="false"
+        android:background="#797ad172">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/helpText"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
             android:textColor="#010101"
             android:textAlignment="center"
             android:textSize="25dp"
             android:lineSpacingExtra="2dp"
             android:autoText="false"
-            android:background="#ffffff"
+            android:background="#a68ad971"
             android:typeface="sans"
             android:textStyle="bold"
-            />
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"/>
 
         <Button
             android:layout_width="match_parent"
@@ -267,20 +268,21 @@
             android:id="@+id/closeButton"
             android:onClick="closeHelp"
             android:nestedScrollingEnabled="false"
-            android:background="#ffffff"
+            android:background="#fcf58a"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textStyle="bold"
             android:textSize="25dp"
             android:padding="5dp"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/playButton"
+            android:layout_alignParentStart="true"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="START THE GAME!"
+            android:text="START PLAYING!"
             android:id="@+id/playButton"
-            android:layout_below="@+id/helpText"
             android:gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="25dp"
@@ -288,8 +290,9 @@
             android:onClick="startGame"
             android:nestedScrollingEnabled="false"
             android:layout_weight="0.3"
-            android:background="#f21d0e"/>
-
+            android:background="#fcf58a"
+            android:layout_below="@+id/helpText"
+            android:layout_alignParentLeft="true"/>
 
 
     </RelativeLayout>
