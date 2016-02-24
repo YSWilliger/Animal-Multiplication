@@ -189,12 +189,12 @@ public class GameActivity extends AppCompatActivity implements TextView.OnEditor
                     case 200:
                         starsView5.setImageResource(R.drawable.elephant);
                         animal4.setImageResource(R.drawable.elephant);
+                        correctView.setText("200! You won!");
                         helpScreen.setVisibility(View.VISIBLE);
                         helpText.setVisibility(View.INVISIBLE);
-                        closeButton.setVisibility(View.VISIBLE);
+                        closeButton.setVisibility(View.INVISIBLE);
                         playButton.setVisibility(View.VISIBLE);
-                        closeButton.setText("You won! Play again?");
-                        correctView.setText("200! You won!");
+                        playButton.setText("You won! Play again?");
                         mp3.start();
 
                         break;
@@ -225,6 +225,7 @@ public class GameActivity extends AppCompatActivity implements TextView.OnEditor
         mainLinearLayout.setVisibility(View.VISIBLE);
         helpScreen.setVisibility(View.INVISIBLE);
         pointsCounter.setText("0");
+        correctView.setText("Good Luck!");
         makeNewProblem();
     }
 
@@ -301,9 +302,9 @@ public class GameActivity extends AppCompatActivity implements TextView.OnEditor
     }
 
     @Override
-    public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+      public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
 
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
+        if (actionId == EditorInfo.IME_ACTION_DONE) {
 
             answerQ(null);
             return true;

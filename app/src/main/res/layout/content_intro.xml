@@ -14,6 +14,6 @@
     tools:showIn="@layout/activity_intro"
     android:clickable="true"
     android:onClick="chgAct"
-    android:background="@drawable/title">
+    android:background="@drawable/titlemultiplication">
 
 </RelativeLayout>
